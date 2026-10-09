@@ -7,7 +7,6 @@ import { Skills } from './components/Skills';
 import { Projects } from './components/Projects';
 import { Experience } from './components/Experience';
 import { Education } from './components/Education';
-import { Activities } from './components/Activities';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { BackToTop } from './components/BackToTop';
@@ -19,17 +18,15 @@ export const App: React.FC = () => {
     const sectionIds = ['home', 'about', 'skills', 'projects', 'experience', 'education', 'contact'];
     
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 200;
+      const scrollPosition = window.scrollY + 180;
 
-      for (const id of sectionIds) {
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const id = sectionIds[i];
         const element = document.getElementById(id);
-        if (element) {
-          const top = element.offsetTop;
-          const height = element.offsetHeight;
-          if (scrollPosition >= top && scrollPosition < top + height) {
-            setActiveSection(id);
-            break;
-          }
+        if (element && scrollPosition >= element.offsetTop) {
+          // Map education section to experience if on navbar
+          setActiveSection(id === 'education' ? 'experience' : id);
+          break;
         }
       }
     };
@@ -41,14 +38,14 @@ export const App: React.FC = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen bg-[#050816] text-slate-100 font-sans selection:bg-[#0EA5FF] selection:text-white">
-      {/* Dynamic Cyber Particle & Mesh Canvas */}
+    <div className="relative min-h-screen bg-[#080c16] text-slate-100 font-sans selection:bg-blue-600 selection:text-white">
+      {/* Subtle Ambient Background */}
       <BackgroundCanvas />
 
-      {/* Sticky Navigation */}
+      {/* Navigation */}
       <Navbar activeSection={activeSection} />
 
-      {/* Main Content Sections */}
+      {/* Main Content */}
       <main className="relative z-10">
         <Hero />
         <About />
@@ -56,14 +53,13 @@ export const App: React.FC = () => {
         <Projects />
         <Experience />
         <Education />
-        <Activities />
         <Contact />
       </main>
 
       {/* Footer */}
       <Footer />
 
-      {/* Back to top floating button */}
+      {/* Back to top button */}
       <BackToTop />
     </div>
   );

@@ -21,11 +21,11 @@ export const BackToTop: React.FC = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="fixed bottom-6 right-6 z-40 p-3 rounded-xl bg-dark-surface/90 border border-accent-blue/40 text-accent-glow hover:text-white hover:bg-accent-blue/30 hover:border-accent-blue shadow-[0_0_20px_rgba(14,165,255,0.3)] backdrop-blur-md transition-all cursor-pointer animate-in fade-in duration-300"
+      className="fixed bottom-6 right-6 z-40 p-2.5 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white hover:border-slate-700 shadow-md transition-colors cursor-pointer"
       title="Back to top"
       aria-label="Back to top"
     >
-      <ArrowUp className="w-5 h-5" />
+      <ArrowUp className="w-4 h-4" />
     </button>
   );
 };
