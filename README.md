@@ -1,5 +1,10 @@
 # Ashwinkrishna N — Premium Animated Developer Portfolio
 
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Visit_Portfolio-0EA5FF?style=for-the-badge&logo=google-chrome&logoColor=white)](https://ashwin-456.github.io/Ashwin_Portfolio/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Ashwin__Portfolio-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Ashwin-456/Ashwin_Portfolio)
+
+> 🚀 **Live URL**: [https://ashwin-456.github.io/Ashwin_Portfolio/](https://ashwin-456.github.io/Ashwin_Portfolio/)
+
 A modern, responsive developer portfolio engineered with a futuristic dark theme, electric-blue accents, interactive technical HUDs, and real-time animation pipelines. Built strictly using the verified curriculum and project records from **Ashwinkrishna N's** profile (`Ashwinkrishna_Profile.pdf`).
 
 ---
